@@ -14,7 +14,9 @@ const Viewer = () => {
     }}>
       <Suspense fallback={null}>
         <Stage shadows={{type: 'contact', opacity: 1, blur: 2, size: 1}}>
-          <Model scale={[0.01, 0.01, 0.01]}/>
+          <mesh scale={[0.01, 0.01, 0.01]}>
+            <Model/>
+          </mesh>
         </Stage>
       </Suspense>
       <OrbitControls makeDefault/>
