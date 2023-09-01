@@ -2,7 +2,7 @@ import {useAnimations, useGLTF} from "@react-three/drei";
 import {useEffect} from "react";
 
 function Model(props: any) {
-  const { scene, animations } = useGLTF('/RobotExpressive.glb')
+  const { scene, animations } = useGLTF('/assets/RobotExpressive.glb')
   const { actions } = useAnimations(animations, scene)
 
   useEffect(() => {
