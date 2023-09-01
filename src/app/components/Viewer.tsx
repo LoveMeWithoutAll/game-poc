@@ -1,7 +1,6 @@
 import {Canvas} from "@react-three/fiber";
 import {Suspense} from "react";
 import {OrbitControls, Stage} from "@react-three/drei";
-import {Vector3} from "three";
 import Model from "./Model.tsx";
 
 const Viewer = () => {
@@ -15,11 +14,7 @@ const Viewer = () => {
     }}>
       <Suspense fallback={null}>
         <Stage shadows={{type: 'contact', opacity: 1, blur: 2, size: 1}}>
-          <mesh>
-            <hemisphereLight position={new Vector3(0, 20, 0)}/>
-            <directionalLight position={new Vector3(0, 20, 10)}/>
-            <Model scale={[0.01, 0.01, 0.01]}/>
-          </mesh>
+          <Model scale={[0.01, 0.01, 0.01]}/>
         </Stage>
       </Suspense>
       <OrbitControls makeDefault/>
